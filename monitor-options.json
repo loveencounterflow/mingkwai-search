@@ -1,0 +1,9 @@
+
+
+{
+	"on-change":	"coffee -c -o ./lib ./src; stylus ./public; node --harmony lib/postprocess.js",
+	"start": "./lib/start.js",
+	"watch-routes": [
+		".",
+		"node_modules/jizura-datasources" ]
+}

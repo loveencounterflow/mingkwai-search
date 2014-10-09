@@ -1,0 +1,3 @@
+#!/bin/sh
+
+stylus public/mingkwai.styl && coffee171 -o lib -c src && sudo ./start-server
