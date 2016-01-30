@@ -27,11 +27,11 @@ echo                      = TRM.echo.bind TRM
 templates                 = require './templates'
 O                         = require '../options'
 #...........................................................................................................
-MOJIKURA                  = require 'coffeenode-mojikura'
+# MOJIKURA                  = require 'coffeenode-mojikura'
 FILESEARCHER              = require './FILESEARCHER'
 DATASOURCES               = require 'jizura-datasources'
 DSREGISTRY                = DATASOURCES.REGISTRY
-db                        = MOJIKURA.new_db()
+# db                        = MOJIKURA.new_db()
 #...........................................................................................................
 ### https://github.com/dominictarr/my-local-ip ###
 get_my_ip                 = require 'my-local-ip'
@@ -251,6 +251,7 @@ static_router.addRoute  '/favicon.ico*',  handle_favicon
   #.........................................................................................................
   else
     log TRM.green '©34w', rqid, "searching in #{ds_infos.length} sources"
+    ###
     #.......................................................................................................
     search_db = ( async_handler ) =>
       id = "glyph:#{q}"
@@ -275,6 +276,7 @@ static_router.addRoute  '/favicon.ico*',  handle_favicon
           # send_buffer() if buffer.length >= 2
         #...................................................................................................
         async_handler null, null
+    ###
     #.......................................................................................................
     search_ds_file = ( ds_info, async_handler ) =>
       dsid      = ds_info[ 'id' ]
@@ -307,10 +309,11 @@ static_router.addRoute  '/favicon.ico*',  handle_favicon
         handler error, null
     #.......................................................................................................
     if do_search_db
-      debug "searching in MojiKuraDB"
-      tasks.push ( handler ) =>
-        search_db ( error ) =>
-          handler error, null
+      warn "searching in MojiKuraDB currently not possible"
+      # debug "searching in MojiKuraDB"
+      # tasks.push ( handler ) =>
+      #   search_db ( error ) =>
+      #     handler error, null
     #.......................................................................................................
     ASYNC.parallel tasks, finalize_response
   #.........................................................................................................

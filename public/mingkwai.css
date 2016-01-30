@@ -197,7 +197,7 @@ span.zh_TW {
   color: rgba(0,0,0,0.5);
   font-size: 120%;
 }
-@media screen and ( -webkit-min-device-pixel-ratio: 0 ) {
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
   #search-button {
     top: -0.5ex;
   }
@@ -264,14 +264,12 @@ a:visited {
   width: 6ex;
 }
 .match,
-.no-match,
-.match {
+.no-match {
   color: #821e00;
 }
 .jzr,
 .u-cjk,
 .u-cjk-xa,
-.u-cjk-xb,
 .u-cjk-xb,
 .u-cjk-xc,
 .u-cjk-xd,
@@ -279,7 +277,8 @@ a:visited {
 .u-cjk-sym,
 .u-cjk-strk,
 .u-cjk-rad1,
-.u-cjk-rad2 {
+.u-cjk-rad2,
+.u-pua {
   font-size: 150%;
   font-family: 'Sun-ExtA';
 }
@@ -293,19 +292,18 @@ a:visited {
   color: #646464;
   background-color: transparent;
 }
-.jzr {
+.jzr,
+.u-pua {
   font-family: 'jizura3a';
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+  position: relative;
+  top: 0.1ex;
+  color: #580b16;
 }
-.u-cjk-sym,
-.u-cjk-strk {
-  font-family: 'Adobe Ming Std L', serif;
-}
-.u-cjk-xb,
 .u-cjk-xb {
   font-family: 'sunflower-u-cjk-xb';
 }
@@ -344,7 +342,6 @@ span.chr-ref {
   .jzr,
   .u-cjk,
   .u-cjk-xa,
-  .u-cjk-xb,
   .u-cjk-xb,
   .u-cjk-xc,
   .u-cjk-xd,
