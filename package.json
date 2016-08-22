@@ -1,5 +1,5 @@
 {
-  "name": "coffeenode-mingkwai",
+  "name": "mingkwai-search",
   "version": "0.0.2",
   "description": "A web front end for the MojiKura database",
   "main": "lib/main.js",

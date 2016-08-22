@@ -81,6 +81,8 @@ limit_registry            = LIMIT.new_registry()
 LIMIT.new_user limit_registry, 'localhost',           'premium'
 LIMIT.new_user limit_registry, '127.0.0.1',           'premium'
 LIMIT.new_user limit_registry, server_info[ 'host' ], 'premium'
+LIMIT.new_user limit_registry, '192.168.178.48',      'premium'
+LIMIT.new_user limit_registry, '192.168.178.43',      'premium'
 # LIMIT.new_user limit_registry, server_info[ 'host' ], 'default'
 # LIMIT.new_user limit_registry, server_info[ 'host' ], 'spam'
 
