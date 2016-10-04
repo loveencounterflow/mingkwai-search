@@ -2,7 +2,7 @@
 
 # this is necessary to update root user on the whereabouts of global node modules:
 export NODE_PATH=~/npm/lib/node_modules
-node-0.10.35 --harmony ./lib/start.js
+/usr/local/n/versions/node/0.10.35/bin/node --harmony ./lib/start.js
 
 
 
